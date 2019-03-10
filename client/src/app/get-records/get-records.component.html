@@ -1,0 +1,45 @@
+<header>
+    <div class="hed">
+        <img src="assets/img/app_img2.png" class="logo" alt="App Renda Fixa" />
+        <div class="hed_whitebox">
+            <h1 class="hed_title_whitebox ">App Renda Fixa</h1>
+        </div>
+    </div>
+</header>
+
+<!--  ===== BODY =====  -->
+<section class="usuario_container">
+    <div [ngClass]="{ 'hide-front': mostrarCard, 'show-back': !mostrarCard }" class="card card--front">
+        <ul>
+            <!--  [ngClass] pegando id do usuário - e alterando CSS na tag <li> clicada  -->
+            <li class="usuario_list" *ngFor="let usuario of usuarios; let i = index"
+                (click)="onMostrarCard2(usuario._id, 'item')"
+                [ngClass]="{ usuariolist2: selectedItem.item == usuario._id }">
+                <div class="img_avatar" [ngClass]="{ imgavatar2: selectedItem.item == usuario._id }">
+                    <img [src]="usuario.url_avatar" alt="Usuário Avatar"/>
+                </div>
+                <span class="usuario_index">{{ i + 1 }}</span>
+                <div class="usuario_content">
+                    <h4 class="usuario_nome">
+                        <p [ngClass]="{ usuarionome2: selectedItem.item == usuario._id }">
+                            {{ getShortName(usuario.nome) }}
+                        </p>
+                        <p class="usuario_email_telefone">
+                           {{ usuario.email }} <br />
+                           {{ usuario.telefone }}
+                        </p>
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <insert-records 
+        (usuarioUpdated)="handleGetUser()"
+        [ngClass]="{ 'hide-front': !mostrarCard, 'show-back': mostrarCard }" class="card card--back">
+    </insert-records>
+</section>
+
+<button type="submit" class="btn btn_vira_card" (click)="onMostrarCard()" (click)="show = !show">
+    {{ show ? "Usuários" : "Cadastre-se" }}
+</button>

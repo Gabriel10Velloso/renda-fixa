@@ -1,0 +1,45 @@
+<a type="submit" class="btn cadastro_titulo">CADASTRO</a>
+
+<div class="row cadastro_form">
+    <form ngNativeValidate #cadastroUser="ngForm" class="col s12">
+        <div class="row">
+
+            <div class="input-field col s12">
+                <input id="nome" required minlength="3" 
+                       maxlength="50" [(ngModel)]="usuario.nome" name="nome"
+                       type="text" class="validate" />
+                <label data-error="Mínimo 3 caracteres e máximo 50" data-success="OK" for="nome">Nome</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input required pattern="^[a-z0-9][a-z0-9\._-]+@([a-z0-9\._-]+\.)[a-z-0-9]{2,3}"
+                      [(ngModel)]="usuario.email" name="email" id="email" 
+                      type="email" class="validate" />
+                <label data-error="Entre com o email válido" data-success="OK" for="email">Email</label>
+            </div>
+            <!-- Problema em resetar a mascara Diretiva - verificar com calma depois -->
+            <div class="input-field col s12" >
+                <input autocomplete="off" required   
+                       [textMask]="{mask: mask}" id="telefone"
+                       [(ngModel)]="usuario.telefone" name="telefone" 
+                       type="text" class="validate" />
+            <label data-error="Entre com o telefone válido" data-success="OK" for="telefone">Telefone</label>
+            </div>
+
+            <div class="input-field col s8">
+                <input required [(ngModel)]="usuario.url_avatar" name="url_avatar" 
+                      id="imagem" type="text" class="validate" />
+                <label data-error="Adicione uma imagem" data-success="OK" for="imagem">Imagem</label>
+            </div>
+            
+            <div class="input-field col s4">
+                <img style="width: 100%" [src]="usuario.url_avatar" alt="">
+            </div>
+        </div>
+    </form>
+</div>
+
+<button  [disabled]="!cadastroUser.valid" type="submit" 
+        class="btn btn_cadastro" (click)="insertRecord()">
+    SALVAR
+</button>

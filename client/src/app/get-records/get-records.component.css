@@ -1,0 +1,172 @@
+.hed {
+    margin-top: 50px;
+}
+
+.hed > img {
+    padding: 8px;
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    margin: 50px 0px;
+}
+
+.hed_whitebox {
+    margin-top: 20px;
+    width: 350px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hed_title_whitebox {
+    font-size: 27px;
+    letter-spacing: -1px;
+    color: #272727;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.btn_vira_card {
+    border-radius: 3px;
+    width: 350px;
+    background: #fc8884;
+    font-weight: 500; 
+    letter-spacing: 0px;
+}
+
+.btn_vira_card:hover {
+    background: #fc6863;  
+}
+
+/* ===== BODY ===== */
+.usuario_list {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    padding: 13.4px;
+    -webkit-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+
+.usuario_list:hover {
+    background-color: #f2f1f1;
+}
+
+.usuariolist2 {
+    background-color: #fc9895;
+}
+
+.usuariolist2:hover {
+    background-color: #fc9895;
+}
+
+.img_avatar {
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    background-color: #e0e0e0;
+    border: 4px solid #55b9f7;
+    overflow: hidden;
+}
+
+.img_avatar > img {
+    width: 66px;
+    height: 66px;
+}
+
+.imgavatar2 {
+    border: 4px solid #ffffff;
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+}
+
+.usuario_index {
+    position: relative;
+    top: 50px;
+    right: 23px;
+    font-size: 15px;
+    background-color: #ffffff;
+    border: 1px solid #656363;
+    letter-spacing: -1px;
+    color: #707070;
+    font-weight: 700;
+    border-radius: 11px;
+    width: 20px;
+    height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.usuario_content {
+    line-height: 0%;
+    margin-top: 3px;
+}
+
+.usuario_nome {
+    line-height: 40%;
+    font-size: 18px;
+    color: #272727;
+    font-weight: 400;
+    letter-spacing: 0px;
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+}
+
+.usuarionome2 {
+    color: #ffffff;
+    font-weight: 600; 
+}
+
+.usuario_email_telefone {
+    margin-top:8px;
+    line-height: 14px;
+    font-size: 11px;
+}
+
+@media only screen and (max-width: 375px) {
+
+    .hed {
+        margin-top: 25px;
+    } 
+
+    .hed > img {
+        margin: 25px 0px;
+    } 
+    
+    .hed_whitebox {
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .hed_title_whitebox {
+        font-size: 22px;
+    }
+
+    .btn_vira_card {
+        width: 300px;
+    }
+    
+}

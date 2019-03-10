@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800");
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    background-color: #2085f5;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.usuario_container {
+    position: relative;
+    margin-top: 15px;
+    width: 350px;
+    height: 490px;
+}
+
+/* === Virando Card "Cadastre-se + Usuários ====  */
+.card {
+    border-radius: 3px;
+    width: 100%;
+    height: 470px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    color: white;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+}
+
+.card--front {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* overflow-x: hidden; */
+}
+
+.card--back {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.hide-front {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.show-back {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+}
+
+/* ⏩ scrollbar */
+::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0),
+    inset 1px 1px 0px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 375px) {
+
+    .usuario_container {
+        margin-top: 5px;
+        width: 300px;
+        height: 415px;
+    }
+    
+    .card {
+        height: 400px;
+    }
+}

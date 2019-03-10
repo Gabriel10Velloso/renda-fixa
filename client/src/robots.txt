@@ -1,0 +1,70 @@
+# Yandex
+User-agent: Yandex
+User-agent: YandexBlogs
+Disallow: /
+
+# Bingbot
+User-Agent: bingbot
+Crawl-delay: 5
+
+# Yahoo Slurp
+User-agent: Slurp
+Crawl-delay: 10
+
+# ahrefs
+User-agent: AhrefsBot
+Disallow: /
+
+# Sogou
+User-agent: Sogou
+Crawl-delay: 10
+
+
+# Google
+User-agent:Googlebot-Image/1.0
+Disallow: 
+Crawl-delay: 5
+
+User-agent: Adsbot-Google
+Disallow: 
+Crawl-delay: 5
+
+User-agent: Mediapartners-Google
+Disallow: 
+Crawl-delay: 5
+
+User-agent: Googlebot
+Disallow: 
+Crawl-delay: 5
+
+User-agent: Googlebot-Video/1.0
+Disallow: 
+Crawl-delay: 5
+
+User-agent: Googlebot-News
+Disallow: 
+Crawl-delay: 5
+
+User-agent: Google-Mobile
+Disallow: 
+Crawl-delay: 5
+
+
+
+# Outros Robos
+User-agent: *
+Disallow: /
+Allow: /src/app/main
+
+
+User-agent: Twitterbot/1.0
+Disallow: 
+
+User-agent: Youtube
+Disallow: 
+
+User-agent: facebookexternalhit/1.1
+Disallow: 
+
+
+Sitemap: http://localhost:4200/app-renda-fixa/sitemap.xml
