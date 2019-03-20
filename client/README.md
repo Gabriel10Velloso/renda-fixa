@@ -1,6 +1,51 @@
 ### https://stackblitz.com/edit/angular-3pxz51?file=src%2Fapp%2Fapp.component.html
 ### https://stackblitz.com/edit/angular-color-div-onclick?file=src%2Fapp%2Fclick-color.directive.ts
 
+
+```
+<hello name="{{ name }}"></hello>
+
+
+<div clickColor>
+  Hello World from Angular
+</div>
+
+<div clickColor color='blue'>
+   Angular  World
+</div>
+
+<div clickColor [color]="'#000'">
+ Batman !!!
+</div>
+```
+
+
+```
+import { Directive, HostBinding, Input,HostListener} from '@angular/core';
+import { DomSanitizer, SafeStyle } from "@angular/platform-browser";
+
+@Directive({
+  selector: '[clickColor]'
+})
+export class ClickColorDirective {
+
+  private toggle: boolean = false;
+  @Input() color: string = 'red';
+
+  constructor(private doms: DomSanitizer) { }
+
+  @HostBinding('style') get myStyle(): SafeStyle {
+    let style : string = this.toggle ? `background: ${this.color}` : '';
+    return this.doms.bypassSecurityTrustStyle(style);
+  }
+  
+  @HostListener('click') onClick() {
+    this.toggle = !this.toggle;
+  } 
+
+}
+```
+
 # Servidor Nodje
  - npm install
  - npm start  -- http://localhost:3000
